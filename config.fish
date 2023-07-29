@@ -9,6 +9,8 @@ set fzf_preview_dir_cmd exa --all --color=always
 
 export EXA_COLORS="reset"
 
+set -gx TERMINFO_DIRS ~/.local/share/terminfo
+
 set fish_cursor_default block blink
 set fish_cursor_insert line blink
 set fish_cursor_replace_one underscore blink
@@ -47,6 +49,7 @@ set -gx NNN_FCOLORS '000004000000000200000000'
 set -gx CC '/usr/bin/CC'
 
 fish_add_path -g ~/.local/bin
+fish_add_path -g ~/.pub-cache/bin
 
 bind -M default \cP history-search-backward
 bind -M default \cN history-search-forward
